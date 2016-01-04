@@ -14,24 +14,61 @@ body{
 	padding:2%;
 }
 
+#sojourn-nav{
+	font-size:12pt;
+	margin-top:3%;
+	color:#675538;
+}
+#sojourn-adven-header-img{
+	margin-left:39%;
+}
 .about-wrapper{
 	background-color: white;
 	padding:2%;
 }
+
+#about-title-image {
+	width:8%;
+	margin-top: 4%;
+	margin-right: -4%;
+	margin-left: -4%;
+}
+
 #about-header{
 	color:#516d21;
 }
 
-#fox-image{
-	width:156% !important;
+.left-rail-image{
+	width:110% !important;
 }
-#location-header{
+
+.left-image-descrip{
+	font-size:11px;
+}
+
+.header-titles{
 	color:#516d21;
+	border-top: 1px solid #dfdfdf;
+	padding-top: 3%;
 }
+
 #sojourn-image{
 	border-top: 1px solid #dfdfdf;
 	padding: 2% 2%;
 }
+
+#note-text{
+	font-style:italic;
+	font-size:small;
+}
 .right-wrapper{
 	background-color:#e2e4db;
+	padding-top: 2.5%;
+	height: 1210px;
+}
+
+.right-rail-image{
+	width:111%;
+	margin-left: -5%;
+	margin-bottom: 10%;
 }
