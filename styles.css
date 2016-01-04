@@ -1,5 +1,5 @@
 body{
-	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://pq.b5z.net/zirw/317/i/u/10099375/i/darkgreenbg.png') no-repeat top center fixed;
+	background: url('http://pq.b5z.net/zirw/317/i/u/10099375/i/darkgreenbg.png') no-repeat top center fixed;
 	background-size: cover;
 	height: 600px;
 }
@@ -8,6 +8,9 @@ body{
 	color:#a7b29b;
 }
 
+.page-header{
+	border-bottom:none !important;
+}
 #top-nav{
 	height:195px;
 	background-color:#E2E4DB;
@@ -71,4 +74,16 @@ body{
 	width:111%;
 	margin-left: -5%;
 	margin-bottom: 10%;
+}
+
+#footer{
+	height:195px;
+	background-color:#E2E4DB;
+	padding:2%;
+	margin-top:3%;
+	text-align:center;
+}
+
+#footer-img1{
+	margin-right:5%;
 }
