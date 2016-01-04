@@ -22,6 +22,12 @@ body{
 	color:#516d21;
 }
 
+#fox-image{
+	width:156% !important;
+}
+#location-header{
+	color:#516d21;
+}
 #sojourn-image{
 	border-top: 1px solid #dfdfdf;
 	padding: 2% 2%;
