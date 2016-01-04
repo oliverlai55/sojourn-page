@@ -1,0 +1,31 @@
+body{
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://pq.b5z.net/zirw/317/i/u/10099375/i/darkgreenbg.png') no-repeat top center fixed;
+	background-size: cover;
+	height: 600px;
+}
+
+#header-font{
+	color:#a7b29b;
+}
+
+#top-nav{
+	height:195px;
+	background-color:#E2E4DB;
+	padding:2%;
+}
+
+.about-wrapper{
+	background-color: white;
+	padding:2%;
+}
+#about-header{
+	color:#516d21;
+}
+
+#sojourn-image{
+	border-top: 1px solid #dfdfdf;
+	padding: 2% 2%;
+}
+.right-wrapper{
+	background-color:#e2e4db;
+}
