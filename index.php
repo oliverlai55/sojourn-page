@@ -32,8 +32,8 @@
 		//every single time it runs, it goes down the row, until the last row
 		//$rows is an array!! And we can access the item with key
 	}
-	print_r($rows);
-	exit;
+	// print_r($rows);
+	// exit;
 
 
 	// print "<pre>";
@@ -91,10 +91,6 @@
 
 <?php
 
-	$string = "Hello World";
-	print '<h2>' . $string . '</h2>';
-	print $string;
-	print "HELLO WORLD";
 
 ?>
 </h2>
