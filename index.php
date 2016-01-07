@@ -1,45 +1,47 @@
 <?php
-	$connection = mysql_connect("127.0.0.1", "phpland", "x");
 
-	if (!$connection){
-		die('Could not connect: ' . mysql_error());
+	include 'inc/db_connect.php';
+
+	if($_GET['logout'] == 'true'){
+		session_destroy();
 	}
 
-	//make foo the current db
-	$db_selected = mysql_select_db('phpland', $connection);
-	if(!$db_selected){
-		die('Can\'t use phpland : ' . mysql_error());
-	}else{
-		print 'success!';
-	}
-
-	$query = "SELECT * FROM about WHERE section = 'header'";
-	// We have a var called query with our query in it
+	$query = "SELECT * FROM about";
+	//We have a var called query with our query in it
 	$result = mysql_query($query);
-	//We now have a mysql object called result
+	//We now have a mysql object called result!
 	if(!$result){
 		die('Query error: ' . mysql_error());
+		//this will print off our error, if one happens;
 	}
-	
-	//prints out the error
 
-	// print $result;
-
-	while ($row = mysql_fetch_assoc($result)){
+	while ($row = mysql_fetch_assoc($result)) { 
 		$section = $row["section"];
 		$rows[$section] = $row['content'];
-		//this is the same as array_push, it pushes to the array
-		//every single time it runs, it goes down the row, until the last row
-		//$rows is an array!! And we can access the item with key
+		// $rows['header'] = 'Our lives take us on many journeys; with our careers, families, sports teams, schools, etc...  At Sojourn, our desire is to provide a safe and fun environment to Sojourn from these life journeys for a brief period of time in order to reflect, gain new insight, and enter back into our journeys with new perspective.';
+
+
+		// $rows is an array!!!
+
+		// $rows['header']
+		// $rows['video_caption']
+		// $rows['body1']
+
+
 	}
-	// print_r($rows);
+
+
+
+// exit;
+	// print "<pre>";
+	// print_r ($rows);
 	// exit;
 
 
-	// print "<pre>";
-	// print_r ($row);
-	$header_content = $row[0]['content'];
+	$header_content = $rows[0]['content'];
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +49,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 	<div class="container-fluid">
@@ -87,25 +89,20 @@
 					<div class="col-sm-12">
 						<img id="about-title-image" class="col-sm-1" src="http://pq.b5z.net/zirw/317/i/u/10099375/i/menu/tico1.png">
 						<h2 class="col-sm-11" id="about-header">
-
-
-<?php
-
-
-?>
-</h2>
+							<?php print $rows['header']; ?>
+						</h2>
 					</div>
 					<img id="sojourn-image" class="col-sm-12" src="http://pq.b5z.net/i/u/10099375/i/About_Sojourn_Header.jpg">
-					<!-- <p class="col-sm-8">Our lives take us on many journeys; with our careers, families, sports teams, schools, etc...  At Sojourn, our desire is to provide a safe and fun environment to Sojourn from these life journeys for a brief period of time in order to reflect, gain new insight, and enter back into our journeys with new perspective.</p> -->
-					
-					<?php print $rows['header']; ?>
-
-
+					<p class="col-sm-8">
+						<?php print $rows['header-text']; ?>
+					</p>
 					<div class="image-box col-sm-4">
 						<img class="left-rail-image col-sm-12" src="http://pq.b5z.net/i/u/10099375/i/Fox_5_Video_of_Sojourn.png">
-						<p class="left-image-descrip col-sm-12">Check out this video about us on Fox 5</p>
+						<p class="left-image-descrip col-sm-12">
+						<?php print $rows['vidcaption']; ?>
+						</p>
 					</div>
-					<h2 class="col-sm-12 header-titles">Location</h2>
+					<h2 class="col-sm-12 header-titles"><?php print $rows['location-title']; ?></h2>
 					<p class="col-sm-8">Most Sojourn programming takes place on the property of Perimeter church in John's Creek, GA. The property is located at the corner of Old Alabama Rd. and Hwy 141/Medlock Bridge Rd. <br><br>If location is a challenge, ask us about off-site adventures and portable programs.</p>
 					<div class="image-box col-sm-4">
 						<img class="left-rail-image col-sm-12" src="http://pq.b5z.net/i/u/10099375/i/Get_Directions_to_Ropes_Course_Button.png">
