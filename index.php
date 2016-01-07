@@ -29,9 +29,6 @@
 
 
 	}
-
-
-
 // exit;
 	// print "<pre>";
 	// print_r ($rows);
@@ -112,9 +109,9 @@
 					<div class="image-box col-sm-4">
 						<img class="left-rail-image col-sm-12" src="http://pq.b5z.net/i/u/10099375/i/ACCT_Logo_Button.png">
 					</div>
-					<h2 class="header-titles col-sm-12">Pricing</h2>
-					<p class="col-sm-12">Pricing varies depending on the length of your adventure, size of your group, and the activities necessary to attain certain group goals and objectives.  For full pricing and further details about booking a course, please contact the Sojourn office</p>
-					<p id="note-text" class="col-sm-12">Note:  Sojourn currently focuses exclusively on team building with pre-existing groups and therefore does not allow individual sign-ups for zip lining, birthday parties, or similar outings.</p>
+					<h2 class="header-titles col-sm-12"><?php print $rows['pricing-title']; ?></h2>
+					<p class="col-sm-12"><?php print $rows['pricing-text']; ?></p>
+					<p id="note-text" class="col-sm-12"><?php print $rows['note-text']; ?></p>
 
 				</div>
 
@@ -129,7 +126,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12" id="footer">
-				<p class="col-sm-12">9500 Medlock Bridge Rd.  |  Johns Creek, GA 30097  |  Phone: 678.405.2106   |   Email: sojourn@perimeter.org</p>
+				<p class="col-sm-12"><?php print $rows['address']; ?></p>
 				<img id="footer-img1" src="http://q.b5z.net/i/u/10099375/i/acct_logo_footer.png">
 				<img id="footer-img2" src="http://q.b5z.net/i/u/10099375/i/staff_login_button_footer.png">
 			</div>
