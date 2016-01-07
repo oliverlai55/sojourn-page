@@ -103,12 +103,12 @@
 						</p>
 					</div>
 					<h2 class="col-sm-12 header-titles"><?php print $rows['location-title']; ?></h2>
-					<p class="col-sm-8">Most Sojourn programming takes place on the property of Perimeter church in John's Creek, GA. The property is located at the corner of Old Alabama Rd. and Hwy 141/Medlock Bridge Rd. <br><br>If location is a challenge, ask us about off-site adventures and portable programs.</p>
+					<p class="col-sm-8"><?php print $rows['location-text']; ?></p>
 					<div class="image-box col-sm-4">
 						<img class="left-rail-image col-sm-12" src="http://pq.b5z.net/i/u/10099375/i/Get_Directions_to_Ropes_Course_Button.png">
 					</div>
-					<h2 class="header-titles col-sm-12">ACCT Membership</h2>
-					<p class="col-sm-8">The Association for Challenge Course Technology is recognized as the leading professional resource for those who create safe and effective challenge course programs that facilitate learning and positive change in individuals, groups, and communities. We are an organizational member of ACCT and our products and services are independent crom those offered by ACCT.  We are not an agent of ACCT nor does the ACCT warrant, endorse, or approve any product or service offered by us.  Sojourn operates under the standards set by ACCT.  All of our staff members are training according to ACCT standards and our key staff members have advanced ACCT certification.</p>
+					<h2 class="header-titles col-sm-12"><?php print $rows['acct-title']; ?></h2>
+					<p class="col-sm-8"><?php print $rows['acct-text']; ?></p>
 					<div class="image-box col-sm-4">
 						<img class="left-rail-image col-sm-12" src="http://pq.b5z.net/i/u/10099375/i/ACCT_Logo_Button.png">
 					</div>
